@@ -13,7 +13,7 @@ import java.io.FileWriter;
  *
  * @author Dmitri
  */
-public class Home3WriteOverBuffer {
+public class Home3_WriteOverBuffer {
     
     private static final String STR = "Write to file";
     
