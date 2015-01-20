@@ -6,9 +6,19 @@
 package demo.files;
 
 import java.io.*;
+//import java.io.BufferedInputStream;
+//import java.io.BufferedReader;
+//import java.io.File;
+//import java.io.FileInputStream;
+//import java.io.FileNotFoundException;
+//import java.io.FileReader;
+//import java.io.FileWriter;
+//import java.io.IOException;
+//import java.io.Writer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.Scanner;
+//import objects.TmpManipulation;
 
 /**
  *
@@ -21,6 +31,8 @@ public class FileManipulations {
     private static final String PATH_NEW_DIR = "/home/velenteenko/work/dirs1";
     private static final String USERNAMES = System.getProperty("user.name");
     private static final String HOMEDIR = "/home/"+USERNAMES+"/";
+    private static final String PATH_FILE_LINUX = "/home/velenteenko/file.txt";
+    private static final String PATH_FILE_WINDOWS = "D:\\file.txt";
     
     public static void main(String[] args) {
             String toMethod;
@@ -75,8 +87,21 @@ public class FileManipulations {
             {
                return HOMEDIR + path;
             }
-//            sc.close();
     }
+//            sc.close();
+//        try {
+//            writeTextToFile(PATH_FILE_WINDOWS);
+//            
+//            System.out.println("File was writen!!!");
+//            
+//            readTextFromfile(PATH_FILE_WINDOWS);
+//            readFileOverBuffer(PATH_FILE_WINDOWS,10);
+//            workWithFileSystem_File(PATH_FILE_WINDOWS);
+//            int res=generateMyselfException();
+//            //callThrowFileException();
+//        } catch (Exception ex) {
+//            Logger.getLogger(FileManipulations.class.getName()).log(Level.SEVERE, null, ex);
+//        }
     
     private static void writeTextToFile(String filename)
     {
@@ -180,6 +205,20 @@ public class FileManipulations {
         System.out.println("created a file: "+f.getName());
         System.out.println("it`s file: "+f.isFile());
         System.out.println("it`s directory: "+f.isDirectory());
+        }        
+
+        private static int generateMyselfException() throws Exception
+        {
+            int a,b,c;
+            a=1;
+            b=2;
+            c=a+b;
+            throw new Exception("Have exception!!!!");
         }
-            
+        
+        private static void callThrowFileException() throws IOException
+        {
+            File f = new File("D:\\ww\\file.txt");
+            f.createNewFile();
+        }
 }
