@@ -42,32 +42,36 @@ public class FileManipulations {
 //           if (inp.contains(HOMEDIR)) {
 //           toMethod = inp;
 //           } else toMethod = HOMEDIR+inp;
-               try (Scanner sc = new Scanner(System.in)) {
-            
-            toMethod = sc.nextLine();
-            writeTextToFile(inputScanner("Input the path to the file for writing: ", toMethod));
+//               try (Scanner sc = new Scanner(System.in)) {
+//            
+//            toMethod = sc.nextLine();
+//            writeTextToFile(inputScanner("Input the path to the file for writing: ", toMethod));
             
             // System.out.println("Input the path to the file for reading: ");
             //   inp = sc.nextLine();
             // System.out.println("File was writen!!!");
-            
-            
-            toMethod = sc.nextLine();
-            readTextFromfile(inputScanner("Input the path to the file for reading: ",toMethod));
-            
-            
-            toMethod = sc.nextLine();
-            readFileOverBuffer(inputScanner("Input the path to the file for reading over buffer: ",toMethod),10);
-            
-            System.out.println("New file-->");
-            
-            toMethod = sc.nextLine();
-            workWithFileSystem_File(inputScanner("Input the path to the create new file: ",toMethod));
-            System.out.println("New dir-->");
-            
-            toMethod = sc.nextLine();
-            workWithFileSystem_Dir(inputScanner("Input the path to the create new dir: ",toMethod));
-        }
+       // try {
+            //            toMethod = sc.nextLine();
+//            readTextFromfile(inputScanner("Input the path to the file for reading: ",toMethod));
+//
+//            
+//            toMethod = sc.nextLine();
+//            readFileOverBuffer(inputScanner("Input the path to the file for reading over buffer: ",toMethod),10);
+//            
+//            System.out.println("New file-->");
+//            
+//            toMethod = sc.nextLine();
+//            workWithFileSystem_File(inputScanner("Input the path to the create new file: ",toMethod));
+//            System.out.println("New dir-->");
+//            
+//            toMethod = sc.nextLine();
+//            workWithFileSystem_Dir(inputScanner("Input the path to the create new dir: ",toMethod));
+           // generateMyselfException();
+           // callThrowFileException();
+        
+       // } catch (Exception ex) {
+        //    Logger.getLogger(FileManipulations.class.getName()).log(Level.SEVERE, null, ex);
+       // }
     }
     
     private static String inputScanner(String message, String path)
@@ -218,7 +222,7 @@ public class FileManipulations {
         
         private static void callThrowFileException() throws IOException
         {
-            File f = new File("D:\\ww\\file.txt");
+            File f = new File("/home/wqwqw/file.txt");
             f.createNewFile();
         }
 }
